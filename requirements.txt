@@ -1,0 +1,24 @@
+# Core UI Frameworks
+streamlit
+gradio
+
+# LangChain Core and Components
+langchain
+langchain-community
+langchain-google-genai
+langchainhub # For pulling prompts like hub.pull("hwchase17/react-chat")
+
+# Google Generative AI SDK
+google-generativeai
+
+# Vector Store
+chromadb
+
+# Tokenizer (often used by LangChain)
+tiktoken
+
+# Environment Variable Loading <<< ADD THIS LINE
+python-dotenv
+
+
+# argparse is a built-in Python library, no need to list
