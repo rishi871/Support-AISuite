@@ -1,4 +1,4 @@
-# CodeSense & JVM Crash Analyzer (v1.0)
+# Support AISuite - CodeSense & JVM Crash Analyzer (v1.0)
 
 This is a Gradio-based application combining two LLM-powered tools:
 
