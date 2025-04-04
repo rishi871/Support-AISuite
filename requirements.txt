@@ -1,24 +1,29 @@
-# Core UI Frameworks
-streamlit
-gradio
+# requirements.txt
 
-# LangChain Core and Components
-langchain
-langchain-community
-langchain-google-genai
-langchainhub # For pulling prompts like hub.pull("hwchase17/react-chat")
+# --- Core Application Framework ---
+gradio               # UI Framework used in app.py
 
-# Google Generative AI SDK
-google-generativeai
+# --- Environment Variables ---
+python-dotenv        # For loading .env files (like GOOGLE_API_KEY, PHOENIX_API_KEY)
 
-# Vector Store
-chromadb
+# --- LangChain & LLM Integration ---
+langchain            # Core LangChain library
+langchain-community  # Community integrations (loaders, vectorstores, etc.)
+langchain-google-genai # Integration with Google Generative AI models (Gemini)
+langchainhub         # For pulling prompts and other LangChain objects (e.g., react-chat agent prompt)
+google-generativeai  # Underlying SDK for Google AI
 
-# Tokenizer (often used by LangChain)
-tiktoken
+# --- Vector Store ---
+chromadb             # Vector database used for storing code embeddings
 
-# Environment Variable Loading <<< ADD THIS LINE
-python-dotenv
+# --- Observability & Tracing ---
+openinference-instrumentation-langchain # Arize Phoenix for tracing/observability, includes OpenTelemetry SDK & Langchain integration
 
+# --- Utilities & Dependencies ---
+tiktoken             # Tokenizer often used by LangChain for text splitting/counting
+chardet              # Character encoding detection, used by TextLoader
 
-# argparse is a built-in Python library, no need to list
+# --- Notes ---
+# - Removed 'streamlit' as the provided app.py uses Gradio.
+# - Consider pinning specific versions (e.g., langchain==0.1.16) for better reproducibility
+#   once you have a stable working environment. Example: pip freeze > requirements.txt
